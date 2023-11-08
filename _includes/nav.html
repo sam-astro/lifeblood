@@ -38,7 +38,7 @@
       {%- if same_category_pages.size != 0 -%}
       <li class="category">{{ category }}</li/>
       {%- for node in same_category_pages -%}
-      <li class="{% if node.title == page.title %}active{% endif %}" style="padding-left: {{node.indent | times:20}}px;"><a href="{{ node.url | absolute_url }}">{{ node.title }}</a></li>
+      <li class="{% if node.title == page.title %}active{% endif %}"><a href="{{ node.url | absolute_url }}" style="padding-left: {{node.indent | times:15}}px;">{{ node.title }}</a></li>
       {%- endfor -%}
       {%- endif -%}
       {%- endfor -%}
@@ -48,14 +48,14 @@
       {%- assign alphabetic_pages = titled_pages | where_exp: "item", "item.nav_order == nil" | sort: "title" -%}
 
       {%- for node in numeric_pages -%}
-      <li class="{% if node.title == page.title %}active{% endif %}" style="padding-left: {{node.indent | times:20}}px;"><a href="{{ node.url | absolute_url }}">{{ node.title }}</a></li>
+      <li class="{% if node.title == page.title %}active{% endif %}"><a href="{{ node.url | absolute_url }}" style="padding-left: {{node.indent | times:15}}px;">{{ node.title }}</a></li>
       {%- endfor -%}
       </ul>
       {%- if alphabetic_pages.size != 0 -%}
       <hr>
       <ul>
       {%- for node in alphabetic_pages -%}
-      <li class="{% if node.title == page.title %}active{% endif %}" style="padding-left: {{node.indent | times:20}}px;"><a href="{{ node.url | absolute_url }}">{{ node.title }}</a></li>
+      <li class="{% if node.title == page.title %}active{% endif %}"><a href="{{ node.url | absolute_url }}" style="padding-left: {{node.indent | times:15}}px;">{{ node.title }}</a></li>
       {%- endfor -%}
       {%- endif -%}
 
