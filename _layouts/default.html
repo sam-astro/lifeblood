@@ -5,7 +5,7 @@ layout: compress
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <body>
+  <body onload="setModifiedDate();">
     {% include nav.html %}
     <div class="wrapper wrapper-content">
       <main>{{ content }}</main>
