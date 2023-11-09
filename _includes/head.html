@@ -58,12 +58,12 @@
               document.getElementById('last-modified').textContent = "Last Modified: " + modified;
               document.getElementById('last-modified').href = commits[0]["html_url"];
               var editTime = Date.parse(modified);
-              const THREEDAYS = 1000 * 60 * 60 * 24 * 3;
-              var threeDaysAgo = Date.now() - THREEDAYS;
+              var thDays = 1000 * 60 * 60 * 24 * 3;
+              var threeDaysAgo = Date.now() - thDays;
               if(editTime>threeDaysAgo){
                 console.log("Page recently updated, showing banner");
                 document.getElementById("recently-updated").style.display = 'block';
-                document.getElementById("recently-updated-link").innerHTML = "This page was recently updated on " + modified + ". Click this banner to view the relevant changes";
+                document.getElementById("recently-updated-link").textContent = "This page was recently updated on " + modified + ". Click this banner to view the relevant changes";
                 document.getElementById("recently-updated-link").href = commits[0]["html_url"];
               }
             }
