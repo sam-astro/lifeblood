@@ -87,7 +87,7 @@ hr {
   border-bottom:1px solid var(--color-hr)
 }
 
-.tip, .note, .caution {
+.tip, .note, .caution, .version {
   padding:0.5rem 1.5rem;
   &:before {
     font-weight:bold
@@ -119,4 +119,13 @@ hr {
 
 .caution:before {
   content:"caution: "
+}
+
+.version {
+  border-left:4px solid var(--color-version-accent);
+  background-color:var(--color-version)
+}
+
+.version:before {
+  content:"version: "
 }
