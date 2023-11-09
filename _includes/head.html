@@ -48,7 +48,7 @@
   <script type="text/javascript">
     function setModifiedDate() {
       if (document.getElementById('last-modified')) {
-        fetch("https://api.github.com/repos/{{ site.github.owner_name }}/{{ site.github.repository_name }}/commits?path={{ page.path }}")
+        fetch("https://api.github.com/repos/{{ site.github.owner_name }}/{{ site.github.repository_name }}/commits?sha=Documentation&path={{ page.path }}")
           .then((response) => {
             return response.json();
           })
