@@ -63,8 +63,8 @@
               if(editTime>threeDaysAgo){
                 console.log("Page recently updated, showing banner");
                 document.getElementById("recently-updated").style.display = 'block';
-                document.getElementById("recently-updated").innerHTML = "<a href=\"" + commits[0]["html_url"] + "\">This page was recently updated on " + modified + ". Click this banner to view the relevant changes</a>";
-                //document.getElementById("recently-updated").href = commits[0]["html_url"];
+                document.getElementById("recently-updated").textContent = "This page was recently updated on " + modified + ". Click this banner to view the relevant changes";
+                document.getElementById("recently-updated-link").href = commits[0]["html_url"];
               }
             }
           });
