@@ -63,7 +63,7 @@
               if(editTime>threeDaysAgo){
                 console.log("Page recently updated, showing banner");
                 document.getElementById("recently-updated").style.display = 'block';
-                document.getElementById("recently-updated-link").textContent = "This page was recently updated on <b>" + modified + "</b>. <u>Click this banner to view the relevant changes</u>";
+                document.getElementById("recently-updated-link").innerHTML = "This page was recently updated on <b>" + modified + "</b>. <u>Click this banner to view the relevant changes</u>";
                 document.getElementById("recently-updated-link").href = commits[0]["html_url"];
               }
             }
