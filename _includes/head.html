@@ -48,7 +48,7 @@
   <script type="text/javascript">
     function setModifiedDate() {
       if (document.getElementById('last-modified')) {
-        fetch("https://api.github.com/repos/{{ site.github.owner_name }}/{{ site.github.repository_name }}/commits?sha=Documentation&path={{ page.path }}")
+        fetch("https://api.github.com/repos/{{ site.github.owner_name }}/{{ site.github.repository_name }}/commits?sha={{ site.github.branch }}&path={{ page.path }}")
           .then((response) => {
             return response.json();
           })
@@ -70,7 +70,7 @@
           });
       }
       if(document.getElementById('footer_edit_button')){
-        document.getElementById('footer_edit_button').href = "https://github.com/{{ site.github.owner_name }}/{{ site.github.repository_name }}/edit/Documentation/{{ page.path }}";
+        document.getElementById('footer_edit_button').href = "https://github.com/{{ site.github.owner_name }}/{{ site.github.repository_name }}/edit/{{ site.github.branch }}/{{ page.path }}";
       }
     }
   </script>
